@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <h2>Controle de usuários</h2>
+    <div class="shadow-sm rounded bg-white p-4">
+        <form [formGroup]="userForm" (ngSubmit)="save()">
+          <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="name">Nome</label>
+                <input 
+                formControlName="name"
+                type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="name">Email</label>
+                <input formControlName="email" type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="name">Idade</label>
+                <input formControlName="age" type="number" class="form-control" placeholder="Age">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="name">Gênero</label>
+                <select formControlName="gender" class="form-control">
+                  <option value="">Selecione o gênero</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+              <button class="btn btn-primary me-4">Add</button>
+              <button class="btn btn-secondary">Limpar</button>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>
